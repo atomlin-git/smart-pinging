@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="request.cpp" />
     <ClCompile Include="smart-pinging.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\main.hpp" />
+    <ClInclude Include="headers\request.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
