@@ -41,9 +41,9 @@ int main()
             int length = recvfrom(SOCKET_, BUFFER, sizeof(BUFFER), 0, (sockaddr*)&from, &fromlen);        
             if (length != -1)
             {
-                if (length == FIRST_ANSWER_SIZE)
+                if (length >= 36 && length <= 38)
                 {
-                    sendto(SOCKET_, (char*)BUFFER, FIRST_ANSWER_SIZE, 0, (sockaddr*)&SOCK, sizeof(sockaddr_in));
+                    sendto(SOCKET_, (char*)BUFFER, length, 0, (sockaddr*)&SOCK, sizeof(sockaddr_in));
                     sendto(SOCKET_, (char*)BYTES_, sizeof(BYTES_), 0, (sockaddr*)&SOCK, sizeof(sockaddr_in));
                     length = -1;
                 }
